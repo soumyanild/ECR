@@ -23,7 +23,7 @@ pipeline {
             steps {
                 cleanWs()
                 sh '''
-                git clone https://github.com/soumyanild/Docker.git
+                git clone https://github.com/soumyanild/ECR.git
                 '''
             }
         }
