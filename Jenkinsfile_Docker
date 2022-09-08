@@ -4,7 +4,7 @@ pipeline {
         AWS_ACCOUNT_ID="336654342245"
         AWS_DEFAULT_REGION="us-east-1" 
         IMAGE_REPO_NAME="jenkins-docker"
-        IMAGE_TAG="latest"
+        IMAGE_TAG="soumyanil"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
     }
    
@@ -29,7 +29,7 @@ pipeline {
             }
         }
   
-    // Building Docker images
+    // Building Docker imagessns
         stage('Building image') {
           steps{
             script {
