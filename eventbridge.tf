@@ -17,6 +17,6 @@ PATTERN
 
 resource "aws_cloudwatch_event_target" "Lambda_for_ECR" {
   rule      = "${aws_cloudwatch_event_rule.ECR_Push.name}"
-  target_id = "Lambda"
+  target_id = "Nilz-Lambda-Function"
   arn       = "${aws_lambda_function.terraform_lambda_func.arn}"
 }
