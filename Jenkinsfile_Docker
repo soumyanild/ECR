@@ -25,7 +25,7 @@ pipeline {
                 cleanWs()
                 sh '''
                 git clone https://github.com/soumyanild/ECR.git
-                cd ${WORKSPACE}/ECR
+                
                 '''
             }
         }
@@ -33,8 +33,12 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 sh '''
-                cd ${WORKSPACE}/ECR
+                cd ECR
+                pwd
+                ls
                 terraform init
+                pwd
+                ls
                 '''
             }
         }
@@ -42,7 +46,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 sh '''
-                cd ${WORKSPACE}/ECR
+                cd ECR
                 terraform plan
                 '''
             }
