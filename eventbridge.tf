@@ -1,6 +1,6 @@
 resource "aws_cloudwatch_event_rule" "ECR_Push" {
-  name        = "capture-aws-sign-in"
-  description = "Capture each AWS Console Sign In"
+  name        = "ECR_Push"
+  description = "Trigger Lambda after every Image Push"
 
   event_pattern = <<PATTERN
   {
