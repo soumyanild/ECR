@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCOUNT_ID="336654342245"
+        AWS_ACCOUNT_ID="547354164162"
         AWS_DEFAULT_REGION="us-east-2" 
-        IMAGE_REPO_NAME="docker-jenins"
+        IMAGE_REPO_NAME="docker-jenkins"
         IMAGE_TAG="soumyanil"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
         THE_CREDS_OF_AWS=credentials('nilz-aws-creds')
