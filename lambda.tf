@@ -62,7 +62,7 @@ resource "aws_lambda_function_event_invoke_config" "lambda-sns" {
 
   destination_config {
     on_success {
-      destination = 'arn:aws:sns:us-east-2:547354164162:ECR_Push'
+      destination = "arn:aws:sns:us-east-2:547354164162:ECR_Push"
     }
   }
 }
