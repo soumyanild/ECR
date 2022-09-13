@@ -44,11 +44,11 @@ resource "aws_iam_role_policy_attachment" "attach_iam_policy_to_iam_role" {
 data "archive_file" "zip_the_python_code" {
   type = "zip"
   source_dir = "${path.module}/Python/"
-  output_path = "${path.module}/Python/Lambda.zip"
+  output_path = "${path.module}/Python/lambda_function.zip"
 }
 
 resource "aws_lambda_function" "terraform_lambda_func" {
-  filename      = "${path.module}/Python/Lambda.zip"
+  filename      = "${path.module}/Python/lambda_function.zip"
   function_name = "Nilz-Lambda-Function"
   role          = aws_iam_role.lambda_role.arn
   handler       = "lambda.lambda_handler"
