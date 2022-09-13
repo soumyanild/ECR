@@ -9,7 +9,7 @@ resource "aws_cloudwatch_event_rule" "ECR_Push" {
   "detail": {
   "action-type": ["PUSH"],
   "result": ["SUCCESS"],
-  "repository-name": ["docker-jenkins"]
+  "repository-name": ["jenkins-docker"]
     }
   }
 PATTERN
